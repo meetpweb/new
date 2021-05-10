@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		.checked {
+			color: orange;
+		}
+	</style>
+</head>
+<body>
+<h2>star rating</h2>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span>
+
+<div class="w3-content w3-section" style="max-width:1350px">
+     <img class="myslides" src="baner11.jpg" style="width: 100%">
+     <img class="myslides" src="baner12.jpg" style="width: 100%">
+     <img class="myslides" src="baner13.jpg" style="width: 100%">
+</div>
+
+<script>
+	var myindex = 0;
+	carousel();
+
+	function carousel() {
+      var i;
+      var x = document.getElementByclassName("myslides");
+      for ( i = 0; i < x.length; i++) {
+      	x[i].style.display ="none";
+      }
+      myindex++;
+      if (myindex > x.length) {myindex = 1}
+      	x[myindex-1].style.display = "block";
+      settimeout{carousel, 3000}; //change image every 2 seconds
+	}
+</script>
+
+</body>
+</html>
